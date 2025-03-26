@@ -1,0 +1,41 @@
+validation:
+  required_columns:
+    - transaction_id
+    - transaction_timestamp
+    - price
+    - quantity
+    - trader_id
+    - symbol
+
+  categorical:
+    transaction_type:
+      valid_values: ["Orders", "Executions"]
+      default: "UNKNOWN"
+    order_status:
+      valid_values: ["New", "Amend", "Cancelled", "Partially-Filled", "Filled"]
+      default: "UNKNOWN"
+
+  regex:
+    mic_code:
+      pattern: "^[A-Z]{4}$"
+      replacement: "XXXX"
+    isin:
+      pattern: "^[A-Z]{2}[A-Z0-9]{10}$"
+      replacement: "INVALID"
+
+  expected_dtypes:
+    transaction_id: "string"
+    transaction_timestamp: "string"
+    transaction_type: "string"
+    order_status: "string"
+    order_type: "string"
+    mic_code: "string"
+    exchange_code: "string"
+    side: "string"
+    symbol: "string"
+    isin: "string"
+    price: "double"
+    quantity: "double"
+    trader_id: "string"
+    broker_id: "string"
+    currency_name: "string"

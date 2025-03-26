@@ -1,0 +1,134 @@
+NUM_TRANSACTIONS: 1000
+INPUT_BATCH_SIZE: 1000
+NO_OF_DAYS: 1
+
+SYMBOLS_RANGE: 20
+TRADERS_RANGE: 50000
+BROKERS_RANGE: 100
+
+PRICE_VARIATION: 0.1
+OUTPUT_FORMAT: "parquet"
+
+VOLUME_MULTIPLIER: 100
+
+TIME_DISTRIBUTION: [0.15, 0.45, 0.40]
+
+REF_EXCHANGES:
+  - exchange_id: 1
+    exchange_code: "NASDAQ"
+  - exchange_id: 2
+    exchange_code: "NYSE"
+  - exchange_id: 3
+    exchange_code: "LSE"
+  - exchange_id: 4
+    exchange_code: "BATS"
+  - exchange_id: 5
+    exchange_code: "NYSE ARCA"
+  - exchange_id: 6
+    exchange_code: "NYSE MKT"
+
+REF_CURRENCIES:
+  - currency_id: 1
+    currency_code: "USD"
+    currency_name: "Dollar"
+  - currency_id: 2
+    currency_code: "EUR"
+    currency_name: "Euro"
+  - currency_id: 3
+    currency_code: "GBP"
+    currency_name: "Pound"
+  - currency_id: 4
+    currency_code: "SGD"
+    currency_name: "Singapore Dollar"
+
+REF_ORDER_TYPES:
+  - order_type_id: 1
+    order_type_name: "Limit"
+  - order_type_id: 2
+    order_type_name: "IceBerg"
+  - order_type_id: 3
+    order_type_name: "Stop"
+  - order_type_id: 4
+    order_type_name: "Market"
+
+REF_SIDES:
+  - side_id: 1
+    side: "Buy"
+    probability: 0.6
+  - side_id: 2
+    side: "Sell"
+    probability: 0.4
+
+REF_TRANSACTION_TYPES:
+  - transaction_type_id: 1
+    transaction_type: "Orders"
+    probability: 0.7
+  - transaction_type_id: 2
+    transaction_type: "Executions"
+    probability: 0.3
+
+REF_ORDER_STATUSES:
+  - order_status_id: 1
+    order_status: "New"
+    probability: 0.1
+  - order_status_id: 2
+    order_status: "Amend"
+    probability: 0.3
+  - order_status_id: 3
+    order_status: "Cancelled"
+    probability: 0.3
+  - order_status_id: 4
+    order_status: "Partially-Filled"
+    probability: 0.1
+  - order_status_id: 5
+    order_status: "Filled"
+    probability: 0.2
+
+REF_MARKET_TIMING:
+  - exchange_id: 1
+    pre_market_open: "08:45:00"
+    pre_market_close: "09:00:00"
+    market_open: "09:00:00"
+    market_close: "17:00:00"
+    post_market_open: "17:00:00"
+    post_market_close: "17:15:00"
+  - exchange_id: 2
+    pre_market_open: "08:45:00"
+    pre_market_close: "09:00:00"
+    market_open: "09:00:00"
+    market_close: "17:00:00"
+    post_market_open: "17:00:00"
+    post_market_close: "17:15:00"
+  - exchange_id: 3
+    pre_market_open: "08:45:00"
+    pre_market_close: "09:00:00"
+    market_open: "09:00:00"
+    market_close: "17:00:00"
+    post_market_open: "17:00:00"
+    post_market_close: "17:15:00"
+
+REF_MICS:
+  - mic_id: 1
+    mic_code: "XLON"
+    exchange_id: 3
+  - mic_id: 2
+    mic_code: "XNYS"
+    exchange_id: 2
+  - mic_id: 3
+    mic_code: "XNAS"
+    exchange_id: 1
+  - mic_id: 4
+    mic_code: "XLOM"
+    exchange_id: 3
+  - mic_id: 5
+    mic_code: "XASE"
+    exchange_id: 1
+  - mic_id: 6
+    mic_code: "BATS"
+    exchange_id: 4
+  - mic_id: 7
+    mic_code: "XASS"
+    exchange_id: 6
+  - mic_id: 8
+    mic_code: "ARCX"
+    exchange_id: 5

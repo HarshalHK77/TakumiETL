@@ -1,0 +1,6 @@
+pandas
+numpy
+fastavro
+pyarrow
+pyyaml
+pyspark
